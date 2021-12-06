@@ -3,13 +3,10 @@ import os
 client = discord.Client()
 from keep_alive import keep_alive
 from replit import db
-import os
-import smtplib, ssl
 keys = db.keys()
 values = db.values()
 from bs4 import BeautifulSoup
 import requests
-from time import strftime
 @client.event
 async def on_guild_join(guild):
   channel = await guild.create_text_channel('Tha-NotePad-Boi')
