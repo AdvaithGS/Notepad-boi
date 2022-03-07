@@ -20,7 +20,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message): 
-  
+  ctx = message.channel  
   author = message.author.discriminator
 
   if message.content.startswith("$signup"):
@@ -128,8 +128,6 @@ async def on_message(message):
       await message.channel.send('Please login or signup first using `$signup (password)` or `$login (password)` ')
     return  
 
-
-
   elif message.content.startswith('$remove'):
     check = db[author]
     if check.endswith('true'):  
@@ -218,10 +216,15 @@ async def on_message(message):
                     l.append(s[8].text)
         else:
           await message.channel.send('Unable to find book')
-  return
-    
+  elif message.content.startswith('.test'):
+    embed = discord.Embed(title = 'Test!',colour = discord.Color.dark_gold(),description = 'This and [That](https://replit.com/@AdvaithGS/Notepad-boi#main.py)')
+    file = discord.File('test.jpg')
+    embed.set_image(url = 'attachment://test.jpg')
+    embed.set_footer(text = 'Im just trying to see how images can be added to embeds in a different way. [That](https://replit.com/@AdvaithGS/Notepad-boi#main.py)')
+    await ctx.send(embed=embed, file=file)  
   
   
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
+#dark blue,
