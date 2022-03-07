@@ -220,7 +220,7 @@ async def on_message(message):
     embed = discord.Embed(title = 'Test!',colour = discord.Color.dark_gold(),description = 'This and [That](https://replit.com/@AdvaithGS/Notepad-boi#main.py)')
     file = discord.File('test.jpg')
     embed.set_image(url = 'attachment://test.jpg')
-    embed.set_footer(text = 'Im just trying to see how images can be added to embeds in a different way. [That](https://replit.com/@AdvaithGS/Notepad-boi#main.py)')
+    embed.set_footer(text = 'Im just trying to see how images can be added to embeds in a different way.')
     await ctx.send(embed=embed, file=file)  
   
   
