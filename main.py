@@ -1,8 +1,9 @@
-import discord
+import disnake as discord
 import os
 client = discord.Client()
 from keep_alive import keep_alive
-from replit import db
+from sqlitedict import SqliteDict
+db = SqliteDict('./db.sqlite')
 keys = db.keys()
 values = db.values()
 from bs4 import BeautifulSoup
@@ -226,5 +227,5 @@ async def on_message(message):
   
 
 keep_alive()
-client.run(os.getenv('TOKEN'))
+client.run('ODA4MjYyODAzMjI3NDEwNDY1.YCD_ZQ.EDL3Sg03X1VU6zk2sqEyMtA-JPQ')
 #dark blue,
