@@ -1,3 +1,4 @@
 Disnake
 sqlitedict
 bs4
+requests
