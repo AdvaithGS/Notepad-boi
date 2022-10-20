@@ -1,7 +1,6 @@
 import disnake as discord
 import os
 client = discord.Client()
-from keep_alive import keep_alive
 from sqlitedict import SqliteDict
 db = SqliteDict('./db.sqlite')
 keys = db.keys()
@@ -226,6 +225,5 @@ async def on_message(message):
   
   
 
-keep_alive()
 client.run(os.environ['notepad_boi'])
 #dark blue,
