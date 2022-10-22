@@ -44,4 +44,4 @@ async def this(
   await ctx.response.send_message(embed = embed)
   await check()
 
-bot.run(os.environ[''])
+bot.run(os.environ['notepad_boi'])
