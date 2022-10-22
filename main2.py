@@ -1,5 +1,6 @@
 import disnake as discord 
 from disnake.ext import commands
+import os
 
 bot = commands.Bot("!", sync_commands_debug=True)
 
