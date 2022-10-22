@@ -18,7 +18,7 @@ async def on_message(message):
 
 
 guild_ids = [808201667543433238]
-channels = [808201667543433241]
+channels = [1023231170458177667]
 
 
 async def check():
